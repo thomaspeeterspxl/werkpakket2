@@ -1,0 +1,89 @@
+@use 'global' as *;
+
+
+.detail {
+  display: flex;
+  height: 100vh;
+
+  .detail-card {
+    display: flex;
+    width: 80%;
+    background: $color-white;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+    .photo {
+      padding: 30px;
+      text-align: center;
+      float: left;
+
+      .photo-detail {
+        max-height: 240px;
+      }
+
+    }
+
+    .detail-description {
+      padding: 30px;
+      float: left;
+      width: 55%;
+      border-left: 2px solid #efefef;
+
+      &-title {
+        color: $secondary-color;
+        font-weight: 300;
+        padding-top: 15px;
+        margin: 0;
+        font-size: 30px;
+        text-align: left;
+      }
+
+      &-name {
+        color: $secondary-color;
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      &-price {
+        margin: 0;
+        color: $secondary-color;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 12px
+      }
+
+      &-tekst {
+        line-height: 20px;
+        color: $secondary-color;
+        padding: 20px 0;
+        margin: 0;
+      }
+      &-list {
+        display: inline-block;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+}
+
+/* Style for the quantity buttons */
+.quantity-button {
+  background-color: $tertiair-color;
+  color:$color-white;
+  border-radius: 15%;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px 10px;
+  //margin: 10px 5px 10px 0;
+}

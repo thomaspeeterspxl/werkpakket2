@@ -1,0 +1,51 @@
+// Kleuren
+$primary-color: #FAEBD7FF;
+$secondary-color: #BEA888;
+$tertiair-color: #84B5A5;
+$color-black: #000;
+$color-white: #fff;
+
+// fonts
+$font-Sono: 'sono';
+$font-josefinSans: 'Josefin Sans', sans-serif;
+$font-nunito: 'Nunito', sans-serif;
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+.link {
+  margin-top: 10px;
+  text-decoration: none;
+  color: $color-white;
+  font-size: 16px;
+}
+
+@mixin flexLayout() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin textStyles($transform: uppercase) {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: $transform;
+  text-align: center;
+}
+
+@mixin positioning($topValue) {
+  position: absolute;
+  top: $topValue;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%fullSpace {
+  width: 100%;
+  height: 100%;
+}
+

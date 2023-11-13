@@ -1,0 +1,65 @@
+//[
+//  { "id": 1, "name": "Product A", "stock": 20 },
+//  { "id": 2, "name": "Product B", "stock": 15 },
+//  { "id": 3, "name": "Product C", "stock": 25 }
+//]
+
+{
+  "producten": [
+    {
+      "id": 1,
+      "titel": "Abbey Road",
+      "omschrijving": "Iconisch album van The Beatles, uitgebracht in 1969.",
+      "afbeelding": "abbey_road.jpg",
+      "prijs": 29.99,
+      "btw_tarief": 21,
+      "voorraad": 50
+    },
+    {
+      "id": 2,
+      "titel": "The Dark Side of the Moon",
+      "omschrijving": "Baandoorbrekend album van Pink Floyd met tijdloze muziek.",
+      "afbeelding": "dark_side_of_moon.jpg",
+      "prijs": 34.99,
+      "btw_tarief": 21,
+      "voorraad": 30
+    },
+    {
+      "id": 3,
+      "titel": "Thriller",
+      "omschrijving": "Het best verkochte album aller tijden van Michael Jackson.",
+      "afbeelding": "thriller.jpg",
+      "prijs": 39.99,
+      "btw_tarief": 21,
+      "voorraad": 20
+    },
+    {
+      "id": 4,
+      "titel": "Rumours",
+      "omschrijving": "Een van de best verkochte albums van Fleetwood Mac.",
+      "afbeelding": "rumours.jpg",
+      "prijs": 27.99,
+      "btw_tarief": 21,
+      "voorraad": 25
+    },
+    {
+      "id": 5,
+      "titel": "The Wall",
+      "omschrijving": "Conceptalbum van Pink Floyd met indrukwekkende visuals.",
+      "afbeelding": "the_wall.jpg",
+      "prijs": 32.99,
+      "btw_tarief": 21,
+      "voorraad": 15
+    },
+
+    {
+      "id": 20,
+      "titel": "Back in Black",
+      "omschrijving": "Klassiek rockalbum van AC/DC met krachtige gitaarriffs.",
+      "afbeelding": "back_in_black.jpg",
+      "prijs": 25.99,
+      "btw_tarief": 21,
+      "voorraad": 10
+    }
+  ]
+}
