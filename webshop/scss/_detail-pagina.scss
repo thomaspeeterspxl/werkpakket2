@@ -76,7 +76,6 @@
   //justify-content: center;
 }
 
-/* Style for the quantity buttons */
 .quantity-button {
   background-color: $tertiair-color;
   color:$color-white;
@@ -85,5 +84,10 @@
   cursor: pointer;
   font-size: 18px;
   padding: 5px 10px;
-  //margin: 10px 5px 10px 0;
+  margin: 10px 5px 10px 0;
+}
+
+.counter_display{
+  padding: 5px 20px;
+  margin: 5px;
 }

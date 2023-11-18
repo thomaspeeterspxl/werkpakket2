@@ -8,7 +8,7 @@
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 
-  &-products{
+  &-products {
     margin: 2%;
     width: 18.5%;
     padding: 1%;
@@ -20,14 +20,16 @@
     align-items: center;
     font-family: $font-josefinSans;
 
-    &-foto{
+    &-foto {
       width: 100%;
       margin: 20px 0;
     }
-    &-tekst{
+
+    &-tekst {
       flex: 1;
     }
-    &-prijs{
+
+    &-prijs {
       padding: 10px;
       background-color: $tertiair-color;
       color: #fff;
@@ -40,21 +42,33 @@
   }
 }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 20px;
+.center {
 
-  .page-link {
-    margin: 0 8px;
-    padding: 8px 16px;
-    background-color: $tertiair-color;
-    border-radius: 5px;
-    text-decoration: none;
-    color: $color-white;
-  }
+
 }
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: $tertiair-color;
+  color: white;
+  border: 1px solid $tertiair-color;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
 
 
 

@@ -1,19 +1,14 @@
-//[
-//  { "id": 1, "name": "Product A", "stock": 20 },
-//  { "id": 2, "name": "Product B", "stock": 15 },
-//  { "id": 3, "name": "Product C", "stock": 25 }
-//]
-
 {
   "producten": [
     {
       "id": 1,
-      "titel": "Abbey Road",
-      "omschrijving": "Iconisch album van The Beatles, uitgebracht in 1969.",
-      "afbeelding": "abbey_road.jpg",
-      "prijs": 29.99,
+      "titel": "Eminem - The Eminem Show (2 LP)",
+      "omschrijving": "The Eminem Show is een album van Eminem uit 2016",
+      "afbeelding": "../assets/images/eminem-lp.png",
+      "prijs": 44.00,
       "btw_tarief": 21,
-      "voorraad": 50
+      "voorraad": 50,
+      "eigenschap": "eigenschap1"
     },
     {
       "id": 2,
@@ -22,7 +17,8 @@
       "afbeelding": "dark_side_of_moon.jpg",
       "prijs": 34.99,
       "btw_tarief": 21,
-      "voorraad": 30
+      "voorraad": 30,
+      "eigenschap": "eigenschap1"
     },
     {
       "id": 3,
@@ -31,7 +27,8 @@
       "afbeelding": "thriller.jpg",
       "prijs": 39.99,
       "btw_tarief": 21,
-      "voorraad": 20
+      "voorraad": 20,
+      "eigenschap": "eigenschap1"
     },
     {
       "id": 4,
@@ -40,7 +37,8 @@
       "afbeelding": "rumours.jpg",
       "prijs": 27.99,
       "btw_tarief": 21,
-      "voorraad": 25
+      "voorraad": 25,
+      "eigenschap": "eigenschap1"
     },
     {
       "id": 5,
@@ -49,9 +47,29 @@
       "afbeelding": "the_wall.jpg",
       "prijs": 32.99,
       "btw_tarief": 21,
-      "voorraad": 15
+      "voorraad": 15,
+      "eigenschap": "eigenschap1"
     },
-
+    {
+      "id": 5,
+      "titel": "The Wall",
+      "omschrijving": "Conceptalbum van Pink Floyd met indrukwekkende visuals.",
+      "afbeelding": "the_wall.jpg",
+      "prijs": 32.99,
+      "btw_tarief": 21,
+      "voorraad": 15,
+      "eigenschap": "eigenschap2"
+    },
+    {
+      "id": 5,
+      "titel": "The Wall",
+      "omschrijving": "Conceptalbum van Pink Floyd met indrukwekkende visuals.",
+      "afbeelding": "the_wall.jpg",
+      "prijs": 32.99,
+      "btw_tarief": 21,
+      "voorraad": 15,
+      "eigenschap": "eigenschap2"
+    },
     {
       "id": 20,
       "titel": "Back in Black",
@@ -59,7 +77,8 @@
       "afbeelding": "back_in_black.jpg",
       "prijs": 25.99,
       "btw_tarief": 21,
-      "voorraad": 10
+      "voorraad": 10,
+      "eigenschap": "eigenschap2"
     }
   ]
 }
