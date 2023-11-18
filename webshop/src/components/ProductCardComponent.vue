@@ -14,16 +14,16 @@
     </div>
   </section>
   <main class="main">
-  <div v-for="(product, index) in filteredProducts" :key="index" class="main-products">
-    <h2>{{ product.titel }}</h2>
-    <img class="main-products-foto" :src="`../assets/images/${product.afbeelding}`" alt="eminem lp">
-    <p class="main-products-tekst">{{ product.omschrijving }}</p>
-    <p class="main-products-prijs">Price: € {{ product.prijs }}</p>
-    <button class="button-detail">
-      <router-link to="/Products:DetailPagina">lees meer</router-link>
-    </button>
-  </div>
-  </main>
+      <div v-for="(product, index) in filteredProducts" :key="index" class="main-products">
+        <h2>{{ product.titel }}</h2>
+        <img class="main-products-foto" :src="product.afbeelding" alt="eminem lp">
+        <p class="main-products-tekst">{{ product.omschrijving }}</p>
+        <p class="main-products-prijs">Price: € {{ product.prijs }}</p>
+        <button class="button-detail">
+          <router-link to="/Products:DetailPagina">lees meer</router-link>
+        </button>
+      </div>
+   </main>
 </template>
 
 
@@ -31,6 +31,7 @@
 import jsonData from '@/assets/products.json'
 
 export default {
+
   data() {
     return {
       selectedFilter: 'all',
@@ -47,7 +48,7 @@ export default {
         return this.products.filter(product => product.eigenschap === this.selectedFilter);
       }
     }
-  }
+  },
 }
 </script>
 
