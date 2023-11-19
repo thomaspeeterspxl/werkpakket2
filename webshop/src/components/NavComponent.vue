@@ -6,7 +6,7 @@
       <li><router-link to="/Products">Producten</router-link></li>
       <li><router-link to="/:Contact">Contact</router-link></li>
       <li><router-link to="/LogIn"><i class="fa-solid fa-user"></i></router-link></li>
-      <li><a href="index.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      <li><router-link to="/Winkelmand"> <i class="fa-solid fa-cart-shopping"></i></router-link></li>
     </ul>
   </nav>
 </template>

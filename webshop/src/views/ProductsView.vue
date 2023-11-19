@@ -51,6 +51,7 @@
     </div>
 
   </main>
+
 </body>
     <!--  <section class="gallery">-->
   <!--    <div class="cards-wrapper">-->

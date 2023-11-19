@@ -8,15 +8,15 @@
         <h2 class="detail-description-title">The Eminem Show (2 LP)</h2>
         <h4 class="detail-description-name">Eminem</h4>
         <h1 class="detail-description-price">€44</h1>
-        <p class="detail-description-tekst"></p>
+        <p class="detail-description-tekst"> The Eminem Show is een album van Eminem uit 2016</p>
         <div class="quantity-container">
           <button id="decreaseQuantity" class="quantity-button" @click="deleteOne()">-</button>
-<!--          <input type="number" name="number" id="quantity" >-->
+          <!--          <input type="number" name="number" id="quantity" >-->
           <p class="counter_display">{{ counter }}</p>
           <button id="increaseQuantity" class="quantity-button" @click="addOne()">+</button>
         </div>
         <button class="button"><a class="link" href="#"> Add to Cart</a></button>
-        The Eminem Show is een album van Eminem uit 2016
+
       </div>
       <div class="detail-description">
         <h2 class="detail-description-title">tracklist</h2>

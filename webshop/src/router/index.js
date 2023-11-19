@@ -4,6 +4,7 @@ import LogInView from "@/views/LogInView.vue";
 import ProductsView from "@/views/ProductsView.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import DetailPaginaView from "@/views/DetailPaginaView.vue";
+import WinkelmandView from "@/views/WinkelmandView.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -27,6 +28,11 @@ const router = createRouter({
             path: '/Products',
             component: ProductsView,
             name: 'Producten'
+        },
+        {
+          path:  '/Winkelmand',
+          component: WinkelmandView,
+          name:'Winkelmand'
         },
         {
             path: '/Products:DetailPagina',
