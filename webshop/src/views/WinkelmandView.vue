@@ -15,14 +15,14 @@
       </thead>
       <tbody>
       <!-- Voorbeeldrijen, vervang deze met echte productgegevens -->
-      <tr>
-        <td>Productnaam 1</td>
-        <td><img src="" alt="Product 1"></td>
-        <td>Omschrijving van product 1.</td>
-        <td>2</td>
-        <td>34.00</td>
-        <td>40.00</td>
-        <td>80.00</td>
+      <tr v-for="item in product" :key="item.name">
+        <td>{{ item.name }}</td>
+        <!-- Voeg andere kolommen toe afhankelijk van je behoeften -->
+        <td><img src="" alt="Product"></td>
+        <td>Omschrijving van {{ item.name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.price }}</td>
+        <!-- Voeg andere kolommen toe voor totaalbedrag, prijs incl btw, etc. -->
       </tr>
       <tr>
         <td>Productnaam 2</td>
@@ -37,9 +37,34 @@
 
 <script>
 export default {
-  name: "WinkelmandView"
+  name: "Winkelmand",
+  data() {
+    return {
+      product: {}
+    };
+  },
+  created() {
+    console.log("WinkelmandView created. Route params:", this.$route.params);
+    const productInfo = this.$route.params.product;
+    console.log("Product info from route params:", productInfo);
+
+    // Voeg het product toe aan de winkelmand
+    this.addToCart(productInfo);
+  },
+  methods: {
+    addToCart(product) {
+      // Voeg het product toe aan de winkelmand
+      this.product.push({
+        name: product.title,
+        quantity: product.quantity,
+        price: product.price
+        // Je kunt hier andere informatie toevoegen afhankelijk van je behoeften
+      });
+    }
+  }
 }
 </script>
+
 
 <style scoped>
 body {

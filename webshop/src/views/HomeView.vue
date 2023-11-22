@@ -50,48 +50,9 @@
 <!--    </div>-->
 <!--  </section>-->
 <AboutComponent/>
-  <section class="gallery">
-    <h1 class="gallery-title">Moet je gezien hebben</h1>
-    <div class="cards-wrapper">
-      <div class="card">
-        <div class="card-overlay">
-          <h1 class="card-overlay-heading">Eminem - The Eminem Show (2 LP)</h1>
-          <p class="card-overlay-paragraph">Price: €44</p>
-        </div>
-        <img src="../assets/images/eminem-lp.png" alt="eminem lp" class="card-image">
-      </div>
-
-      <div class="card">
-        <div class="card-overlay">
-          <h1 class="card-overlay-heading">Eminem - Slim Shady (2 LP)</h1>
-          <p class="card-overlay-paragraph">Price: €44</p>
-        </div>
-        <img src="../assets/images/eminem-lp2.png" alt="Eminem - Slim Shady (2 LP)" class="card-image">
-      </div>
-      <div class="card">
-        <div class="card-overlay">
-          <h1 class="card-overlay-heading">vinyl/LP opbergrek</h1>
-          <p class="card-overlay-paragraph">Price: €32</p>
-        </div>
-        <img src="../assets/images/lp-houder.jpg" alt="vinyl/LP opbergrek" class="card-image">
-      </div>
-      <div class="card">
-        <div class="card-overlay">
-          <h1 class="card-overlay-heading">Bluetooth-platenspeler</h1>
-          <p class="card-overlay-paragraph">Price: €160</p>
-        </div>
-        <img src="../assets/images/lp-speler.jpg" alt="Bluetooth-platenspeler" class="card-image">
-      </div>
-      <div class="card">
-        <div class="card-overlay">
-          <h1 class="card-overlay-heading">platenspeler vervangings naald</h1>
-          <p class="card-overlay-paragraph">Price: €13</p>
-        </div>
-        <img src="../assets/images/lp-naald.png" alt="platenspeler vervangings naald" class="card-image">
-      </div>
-    </div>
-  </section>
-<FooterComponent/>
+<!--<ProductCardComponentV1></ProductCardComponentV1>-->
+<PopularProductsComponent/>
+<ContactComponent/>
 <!--  <section id="contact">-->
 <!--    <div class="container">-->
 <!--      <section class="company-info">-->
@@ -120,20 +81,22 @@
 </template>
 
 <script>
-import FooterComponent from '@/components/FooterComponent.vue'
+
 import AboutComponent from '@/components/AboutComponent.vue'
-import NavComponent from "@/components/NavComponent.vue";
-import HeaderComponent from "@/components/HeaderComponent.vue";
-import CardComponent from "@/components/ProductCardComponent.vue";
+// import ProductCardComponentV1 from "@/components/ProductCardComponentV1.vue";
+import ContactComponent from "@/components/ContactComponent.vue";
+import PopularProductsComponent from "@/components/PopularProductsComponent.vue";
 export default {
   data() {
     return {}
 
   },
   components: {
+    ContactComponent,
+    // ProductCardComponentV1,
+    PopularProductsComponent,
     // NavComponent,
     // HeaderComponent,
-    FooterComponent,
     AboutComponent,
     // CardComponent
   }

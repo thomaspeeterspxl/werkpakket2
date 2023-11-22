@@ -29,6 +29,12 @@ const router = createRouter({
             component: ProductsView,
             name: 'Producten'
         },
+        // {
+        //     path: '/Products/:productId',
+        //     component: DetailPaginaView,
+        //     name: 'DetailPagina'
+        // },
+
         {
           path:  '/Winkelmand',
           component: WinkelmandView,
@@ -38,7 +44,8 @@ const router = createRouter({
             path: '/Products:DetailPagina',
             component: DetailPaginaView,
             name: 'DetailPagina'
-        }
+        },
+
     ]
 })
 

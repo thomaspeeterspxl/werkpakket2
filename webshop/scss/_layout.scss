@@ -77,11 +77,20 @@
   .cards-wrapper {
     display: flex;
     flex-wrap: wrap;
-
   }
 }
 .tekst-overzichtspagina{
   margin: 0 0 0 2rem;
   padding-top: 2rem;
   font-family: $font-nunito;
+}
+.footer{
+  background-color: $primary-color;
+  height: 40px;
+  border-top: 3px dotted $tertiair-color;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:$font-Sono;
 }

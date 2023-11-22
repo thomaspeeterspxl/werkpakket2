@@ -28,7 +28,7 @@ export default {
 <!--    <AboutComponent/>-->
     <router-view>
     </router-view>
-<!--    <FooterComponent/>-->
+    <FooterComponent/>
 
 
 </template>

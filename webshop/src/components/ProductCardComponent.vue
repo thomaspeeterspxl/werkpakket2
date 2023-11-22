@@ -8,8 +8,8 @@
       <select v-model="selectedFilter" id="filter" @change="filterProducts">
         <!-- ... (Je bestaande filteropties) -->
         <option value="all">Alle producten</option>
-        <option value="eigenschap1">Eigenschap 1</option>
-        <option value="eigenschap2">Eigenschap 2</option>
+        <option value="eigenschap1">vinyl platen</option>
+        <option value="eigenschap2">platenspelers & naalden</option>
       </select>
     </div>
   </section>
@@ -37,6 +37,8 @@ export default {
       selectedFilter: 'all',
     }
   },
+
+
   computed: {
     products() {
       return jsonData.producten
@@ -48,8 +50,7 @@ export default {
         return this.products.filter(product => product.eigenschap === this.selectedFilter);
       }
     }
-  },
-}
+  }}
 </script>
 
 <style scoped>

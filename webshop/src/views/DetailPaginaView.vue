@@ -2,21 +2,21 @@
   <div class="detail">
     <section class="detail-card">
       <div class="photo">
-        <img class="photo-detail" src="../assets/images/eminem-lp.png" alt="eminem">
+        <img class="photo-detail" :src="product.afbeelding" :alt="product.titel">
       </div>
-      <div  class="detail-description">
-        <h2 class="detail-description-title">The Eminem Show (2 LP)</h2>
-        <h4 class="detail-description-name">Eminem</h4>
-        <h1 class="detail-description-price">€44</h1>
-        <p class="detail-description-tekst"> The Eminem Show is een album van Eminem uit 2016</p>
+      <div class="detail-description">
+        <h2 class="detail-description-title">{{ product.titel }}</h2>
+        <h4 class="detail-description-name">{{ product.artist }}</h4>
+        <h1 class="detail-description-price">€{{ product.prijs }}</h1>
+        <h1 class="detail-description-price">{{ product.btw_tarief }}% BTW</h1>
+        <p class="detail-description-price">{{ product.voorraad }} stuks in voorraad</p>
+        <p class="detail-description-tekst">{{ product.omschrijving }}</p>
         <div class="quantity-container">
           <button id="decreaseQuantity" class="quantity-button" @click="deleteOne()">-</button>
-          <!--          <input type="number" name="number" id="quantity" >-->
           <p class="counter_display">{{ counter }}</p>
           <button id="increaseQuantity" class="quantity-button" @click="addOne()">+</button>
         </div>
-        <button class="button"><a class="link" href="#"> Add to Cart</a></button>
-
+        <button class="button" @click="addToCart">Add to Cart</button>
       </div>
       <div class="detail-description">
         <h2 class="detail-description-title">tracklist</h2>
@@ -54,27 +54,47 @@
 </template>
 
 <script>
-import jsonData from '@/assets/products.json'
+import jsonData from '@/assets/products.json';
+
 export default {
-  data(){
-    return{
+  data() {
+    return {
+      product: {},
       counter: 0,
-    }
+    };
   },
-  methods:{
+  created() {
+    // Fetch the product based on the product ID (in this case, ID 1)
+    const productId = 1; // Update this with the desired product ID
+    this.product = this.getProductById(productId);
+  },
+  // created() {
+  //   const productId = this.$route.params.id;
+  //   this.product = this.getProductById(productId);
+  // },
+  methods: {
+    getProductById(id) {
+      return jsonData.producten.find(product => product.id === parseInt(id)) || {};
+    },
+    // getProductById(id) {
+    //   return jsonData.producten.find(product => product.id === parseInt(id)) || {};
+    // },
     addOne() {
-      this.counter += 1
+      if (this.counter < this.product.voorraad) {
+        this.counter += 1;
+      }
     },
     deleteOne() {
-      this.counter -= 1
+      if (this.counter > 0) {
+        this.counter -= 1;
+      }
+    },
+    addToCart() {
+      // Implement your logic for adding the product to the cart
+      // You can use this.product and this.counter to get the selected product and quantity
     },
   },
-  computed: {
-    products() {
-      return jsonData.producten
-    }
-  },
-}
+};
 </script>
 
 <style scoped>
