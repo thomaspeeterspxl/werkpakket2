@@ -28,16 +28,16 @@ import jsonData from '@/assets/products.json';
 export default {
   computed: {
     top5Products() {
-      // Call the method to get the top 5 products
       return this.getTop5Products();
     },
   },
   methods: {
     getTop5Products() {
-      // Sort a copy of the products based on "voorraad" in descending order
-      const sortedProducts = [...jsonData.producten].sort((a, b) => b.voorraad - a.voorraad);
 
-      // Get the top 5 products
+      const sortedProducts = jsonData.producten
+      sortedProducts.sort((a, b) => b.voorraad - a.voorraad);
+
+
       const top5Products = sortedProducts.slice(0, 5);
 
       return top5Products;

@@ -6,7 +6,6 @@
     <div class="filter">
       <label for="filter">Filter op eigenschap:</label>
       <select v-model="selectedFilter" id="filter" @change="filterProducts">
-        <!-- ... (Je bestaande filteropties) -->
         <option value="all">Alle producten</option>
         <option value="eigenschap1">vinyl platen</option>
         <option value="eigenschap2">platenspelers & naalden</option>

@@ -64,21 +64,15 @@ export default {
     };
   },
   created() {
-    // Fetch the product based on the product ID (in this case, ID 1)
-    const productId = 1; // Update this with the desired product ID
+
+    const productId = 1;
     this.product = this.getProductById(productId);
   },
-  // created() {
-  //   const productId = this.$route.params.id;
-  //   this.product = this.getProductById(productId);
-  // },
+
   methods: {
     getProductById(id) {
       return jsonData.producten.find(product => product.id === parseInt(id)) || {};
     },
-    // getProductById(id) {
-    //   return jsonData.producten.find(product => product.id === parseInt(id)) || {};
-    // },
     addOne() {
       if (this.counter < this.product.voorraad) {
         this.counter += 1;
@@ -90,8 +84,7 @@ export default {
       }
     },
     addToCart() {
-      // Implement your logic for adding the product to the cart
-      // You can use this.product and this.counter to get the selected product and quantity
+
     },
   },
 };
