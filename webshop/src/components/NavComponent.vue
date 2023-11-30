@@ -3,7 +3,7 @@
     <img src="../assets/images/Layer%206.png" alt="nav image">
     <ul>
       <li><router-link to="/"><i class="fa-solid fa-house"></i></router-link></li>
-      <li><router-link to="/Products">Producten</router-link></li>
+      <li><router-link to="/products/1">Producten</router-link></li>
       <li><router-link to="/:Contact">Contact</router-link></li>
       <li><router-link to="/LogIn"><i class="fa-solid fa-user"></i></router-link></li>
       <li><router-link to="/Winkelmand"> <i class="fa-solid fa-cart-shopping"></i></router-link></li>

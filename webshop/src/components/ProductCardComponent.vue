@@ -10,19 +10,30 @@
         <option value="eigenschap1">vinyl platen</option>
         <option value="eigenschap2">platenspelers & naalden</option>
       </select>
+      <select v-model="selectedFilter" id="filter" @change="filterProducts">
+        <option value="eigenschap1">Alle artiesten</option>
+        <option value="eigenschap1, eminem">eminem</option>
+        <option value="ed sheeran">ed sheeran</option>
+      </select>
     </div>
   </section>
   <main class="main">
-      <div v-for="(product, index) in filteredProducts" :key="index" class="main-products">
-        <h2>{{ product.titel }}</h2>
-        <img class="main-products-foto" :src="product.afbeelding" alt="eminem lp">
-        <p class="main-products-tekst">{{ product.omschrijving }}</p>
-        <p class="main-products-prijs">Price: € {{ product.prijs }}</p>
-        <button class="button-detail">
-          <router-link to="/Products:DetailPagina">lees meer</router-link>
-        </button>
-      </div>
-   </main>
+    <div v-for="(product, index) in paginatedItems" :key="index" class="main-products">
+      <h2>{{ product.titel }}</h2>
+      <img class="main-products-foto" :src= 'product.afbeelding' alt="eminem lp">
+      <p class="main-products-tekst">{{ product.omschrijving }}</p>
+      <p class="main-products-prijs">Price: € {{ product.prijs }}</p>
+      <button class="button-detail">
+        <router-link to="/Products:DetailPagina">lees meer</router-link>
+      </button>
+    </div>
+
+  </main>
+  <div class="pagination">
+    <router-link v-for="pageNumber in pageCount" :to="getRoute(pageNumber)" :key="pageNumber">
+      {{ pageNumber }}
+    </router-link>
+  </div>
 </template>
 
 
@@ -31,27 +42,45 @@ import jsonData from '@/assets/products.json'
 
 export default {
 
-  data() {
-    return {
-      selectedFilter: 'all',
-    }
-  },
-
+  props: ['page'],
 
   computed: {
-    products() {
-      return jsonData.producten
+    itemsPerPage() {
+      return 8;
     },
-    filteredProducts() {
-      if (this.selectedFilter === 'all') {
-        return this.products;
-      } else {
-        return this.products.filter(product => product.eigenschap === this.selectedFilter);
-      }
-    }
-  }}
-</script>
+    pageCount() {
+      return Math.ceil(this.items.length / this.itemsPerPage);
+    },
+    paginatedItems() {
+      const startIndex = (this.page - 1) * this.itemsPerPage;
+      const endIndex = startIndex + this.itemsPerPage;
+      return this.items.slice(startIndex, endIndex);
+    },
 
+  },
+
+  methods: {
+    getRoute(page) {
+      return { name: 'ProductList', params: { page } };
+    },
+    filterProducts() {
+      if (this.selectedFilter === 'all') {
+        this.items = jsonData.producten;
+      } else {
+        this.items = jsonData.producten.filter(product => product.eigenschap === this.selectedFilter);
+      }
+    },
+  },
+
+  data() {
+    return {
+      items: jsonData.producten,
+      selectedFilter: 'all',
+    };
+  },
+};
+</script>
 <style scoped>
 
 </style>
+
