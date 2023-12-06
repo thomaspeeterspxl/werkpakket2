@@ -12,7 +12,7 @@
     <div  class="cards-wrapper">
       <div v-for="product in top5Products" :key="product.id" class="card">
         <div class="card-overlay">
-          <h1 class="card-overlay-heading">{{ product.titel }}</h1>
+          <h1 class="card-overlay-heading">{{ product.title }}</h1>
           <p class="card-overlay-paragraph">Price: € {{ product.prijs }}</p>
           <p class="card-overlay-paragraph">Voorraad: {{ product.voorraad }} stuks</p>
         </div>

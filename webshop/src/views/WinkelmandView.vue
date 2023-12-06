@@ -38,30 +38,30 @@
 <script>
 export default {
   name: "Winkelmand",
-  data() {
-    return {
-      product: {}
-    };
-  },
-  created() {
-    console.log("WinkelmandView created. Route params:", this.$route.params);
-    const productInfo = this.$route.params.product;
-    console.log("Product info from route params:", productInfo);
-
-    // Voeg het product toe aan de winkelmand
-    this.addToCart(productInfo);
-  },
-  methods: {
-    addToCart(product) {
-      // Voeg het product toe aan de winkelmand
-      this.product.push({
-        name: product.title,
-        quantity: product.quantity,
-        price: product.price
-        // Je kunt hier andere informatie toevoegen afhankelijk van je behoeften
-      });
-    }
-  }
+  // data() {
+  //   return {
+  //     product: {}
+  //   };
+  // },
+  // created() {
+  //   console.log("WinkelmandView created. Route params:", this.$route.params);
+  //   const productInfo = this.$route.params.product;
+  //   console.log("Product info from route params:", productInfo);
+  //
+  //   // Voeg het product toe aan de winkelmand
+  //   this.addToCart(productInfo);
+  // },
+  // methods: {
+  //   addToCart(product) {
+  //     // Voeg het product toe aan de winkelmand
+  //     this.product.push({
+  //       name: product.title,
+  //       quantity: product.quantity,
+  //       price: product.price
+  //       // Je kunt hier andere informatie toevoegen afhankelijk van je behoeften
+  //     });
+  //   }
+  // }
 }
 </script>
 

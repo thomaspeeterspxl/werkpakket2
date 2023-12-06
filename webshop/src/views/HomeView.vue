@@ -89,7 +89,6 @@ import PopularProductsComponent from "@/components/PopularProductsComponent.vue"
 export default {
   data() {
     return {}
-
   },
   components: {
     ContactComponent,

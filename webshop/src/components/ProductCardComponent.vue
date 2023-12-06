@@ -10,22 +10,23 @@
         <option value="eigenschap1">vinyl platen</option>
         <option value="eigenschap2">platenspelers & naalden</option>
       </select>
-      <select v-model="selectedFilter" id="filter" @change="filterProducts">
-        <option value="eigenschap1">Alle artiesten</option>
-        <option value="eigenschap1, eminem">eminem</option>
-        <option value="ed sheeran">ed sheeran</option>
-      </select>
+<!--      <select v-model="selectedFilter" id="filter" @change="filterProducts">-->
+<!--        <option value="eigenschap1">Alle artiesten</option>-->
+<!--        <option value="eigenschap1, eminem">eminem</option>-->
+<!--        <option value="ed sheeran">ed sheeran</option>-->
+<!--      </select>-->
     </div>
   </section>
   <main class="main">
     <div v-for="(product, index) in paginatedItems" :key="index" class="main-products">
-      <h2>{{ product.titel }}</h2>
+      <h2>{{ product.title}}</h2>
       <img class="main-products-foto" :src= 'product.afbeelding' alt="eminem lp">
       <p class="main-products-tekst">{{ product.omschrijving }}</p>
       <p class="main-products-prijs">Price: € {{ product.prijs }}</p>
-      <button class="button-detail">
-        <router-link to="/Products:DetailPagina">lees meer</router-link>
-      </button>
+      <router-link :to="{ name: 'ProductDetail', params: {id: product.id }}">
+        <button class="button-detail">lees meer</button>
+      </router-link>
+
     </div>
 
   </main>
@@ -71,7 +72,6 @@ export default {
       }
     },
   },
-
   data() {
     return {
       items: jsonData.producten,
@@ -83,4 +83,3 @@ export default {
 <style scoped>
 
 </style>
-

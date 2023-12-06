@@ -87,10 +87,10 @@
 .footer{
   background-color: $primary-color;
   height: 40px;
-  border-top: 3px dotted $tertiair-color;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family:$font-Sono;
+  font-family: $font-Sono;
+  bottom: 0;
 }
