@@ -2,10 +2,11 @@ import { createRouter, createWebHistory} from "vue-router";
 import HomeView from '@/views/HomeView.vue'
 import LogInView from "@/views/LogInView.vue";
 import ProductsView from "@/views/ProductsView.vue";
-import DetailPaginaView from "@/views/DetailPaginaView.vue";
+// import DetailPaginaView from "@/views/DetailPaginaView.vue";
 import WinkelmandView from "@/views/WinkelmandView.vue";
-import productsView from "@/views/ProductsView.vue";
+// import productsView from "@/views/ProductsView.vue";
 import bevestigingsPaginaView from "@/views/BevestigingsPaginaView.vue";
+import DetailView from "@/views/DetailView.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -25,6 +26,11 @@ const router = createRouter({
             component: HomeView,
             name: 'Contact'
         },
+        {
+            path: '/products',
+            component: ProductsView,
+        },
+        {  path: '/details/:id', name: 'details', component: DetailView, props: true },
         // {
         //     path: '/Products',
         //     component: ProductsView,
@@ -36,24 +42,24 @@ const router = createRouter({
         //     component: productsView,
         //     props: true,
         // },
-        {
-            path: '/products/:page/:eigenschap?/:artist?',
-            name: 'ProductList',
-            component: productsView,
-            props: true,
-        },
+        // {
+        //     path: '/products/:page/:eigenschap?/:artist?',
+        //     name: 'ProductList',
+        //     component: productsView,
+        //     props: true,
+        // },
 
         {
           path:  '/Winkelmand',
           component: WinkelmandView,
           name:'Winkelmand'
         },
-        {
-            path: '/products/:id',
-            name: 'ProductDetail',
-            component: DetailPaginaView,
-            props: true,
-        },
+        // {
+        //     path: '/products/:id',
+        //     name: 'ProductDetail',
+        //     component: DetailPaginaView,
+        //     props: true,
+        // },
         {
             path: '/bevestigingspagina',
             component: bevestigingsPaginaView,

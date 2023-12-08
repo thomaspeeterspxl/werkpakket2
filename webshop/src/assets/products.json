@@ -9,7 +9,7 @@
       "prijs": 44.00,
       "btw_tarief": 21,
       "voorraad": 25,
-      "eigenschapen": ["eigenschap1","eminem"]
+      "eigenschappen": ["vinyls","eminem"]
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "prijs": 44,
       "btw_tarief": 21,
       "voorraad": 25,
-      "eigenschapen": ["eigenschap1","eminem"]
+      "eigenschappen": ["vinyls","eminem"]
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "prijs": 39.99,
       "btw_tarief": 21,
       "voorraad": 28,
-      "eigenschapen": ["eigenschap1","eminem"]
+      "eigenschappen": ["vinyls","eminem"]
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
       "prijs": 36.50,
       "btw_tarief": 21,
       "voorraad": 25,
-      "eigenschapen": ["eigenschap1","eminem"]
+      "eigenschappen": ["vinyls","eminem"]
     },
     {
       "id": 5,
@@ -52,7 +52,7 @@
       "prijs": 48,
       "btw_tarief": 21,
       "voorraad": 15,
-      "eigenschapen": ["eigenschap1","rammstein"]
+      "eigenschappen": ["vinyls","rammstein"]
     },
     {
       "id": 6,
@@ -62,7 +62,7 @@
       "prijs": 30,
       "btw_tarief": 21,
       "voorraad": 56,
-      "eigenschapen": ["eigenschap1","boywithuke"]
+      "eigenschappen": ["vinyls","boywithuke"]
     },
     {
       "id": 7,
@@ -72,7 +72,7 @@
       "prijs": 218,
       "btw_tarief": 21,
       "voorraad": 50,
-      "eigenschapen": ["eigenschap2","platenspeler"]
+      "eigenschappen": ["platenspelers & accesiores","platenspeler"]
     },
     {
       "id": 8,
@@ -82,7 +82,7 @@
       "prijs": 50,
       "btw_tarief": 21,
       "voorraad": 16,
-      "eigenschapen": ["eigenschap2","platenspeler"]
+      "eigenschappen": ["platenspelers & accesiores","platenspeler"]
     },
     {
       "id": 9,
@@ -92,7 +92,7 @@
       "prijs": 36.99,
       "btw_tarief": 21,
       "voorraad": 15,
-      "eigenschapen": ["eigenschap1","ed-sheeran"]
+      "eigenschappen": ["vinyls","ed-sheeran"]
     },
     {
       "id": 10,
@@ -102,7 +102,7 @@
       "prijs": 22.99,
       "btw_tarief": 21,
       "voorraad": 15,
-      "eigenschapen": ["eigenschap1","ed-sheeran"]
+      "eigenschappen": ["vinyls","ed-sheeran"]
     },
     {
       "id": 11,
@@ -112,7 +112,7 @@
       "prijs": 32,
       "btw_tarief": 21,
       "voorraad": 15,
-      "eigenschapen": ["eigenschap1","ed-sheeran"]
+      "eigenschappen": ["vinyls","ed-sheeran"]
     },
     {
       "id": 12,
@@ -122,7 +122,7 @@
       "prijs": 25,
       "btw_tarief": 21,
       "voorraad": 15,
-      "eigenschapen": ["eigenschap2","naald"]
+      "eigenschappen": ["platenspelers & accesiores","naalden"]
     },
     {
       "id": 13,
@@ -132,7 +132,7 @@
       "prijs": 189,
       "btw_tarief": 21,
       "voorraad": 55,
-      "eigenschapen": ["eigenschap2","naald"]
+      "eigenschappen": ["platenspelers & accesiores","naalden"]
     },
     {
       "id": 14,
@@ -142,7 +142,7 @@
       "prijs": 57,
       "btw_tarief": 21,
       "voorraad": 40,
-      "eigenschapen": ["eigenschap1","game/movie"]
+      "eigenschappen": ["vinyls","game/movie"]
     },
     {
       "id": 15,
@@ -152,7 +152,7 @@
       "prijs": 35.99,
       "btw_tarief": 21,
       "voorraad": 20,
-      "eigenschapen": ["eigenschap1","game/movie"]
+      "eigenschappen": ["vinyls","game/movie"]
     },
     {
       "id": 16,
@@ -162,7 +162,7 @@
       "prijs": 30.99,
       "btw_tarief": 21,
       "voorraad": 20,
-      "eigenschapen": ["eigenschap1","harry-styles"]
+      "eigenschappen": ["vinyls","harry-styles"]
     },
     {
       "id": 17,
@@ -172,7 +172,7 @@
       "prijs": 40.99,
       "btw_tarief": 21,
       "voorraad": 20,
-      "eigenschapen": ["eigenschap1","eminem"]
+      "eigenschappen": ["vinyls","eminem"]
     },
     {
       "id": 18,
@@ -182,7 +182,7 @@
       "prijs": 36.99,
       "btw_tarief": 21,
       "voorraad": 20,
-      "eigenschapen": ["eigenschap1","eminem"]
+      "eigenschappen": ["vinyls","eminem"]
     },
     {
       "id": 19,
@@ -192,7 +192,7 @@
       "prijs": 30,
       "btw_tarief": 21,
       "voorraad": 20,
-      "eigenschapen": ["eigenschap2","hoezen"]
+      "eigenschappen": ["platenspelers & accesiores","hoezen"]
     },
     {
       "id": 20,
@@ -202,7 +202,7 @@
       "prijs": 134,
       "btw_tarief": 21,
       "voorraad": 20,
-      "eigenschapen": ["eigenschap2","platenspeler"]
+      "eigenschappen": ["platenspelers & accesiores","platenspeler"]
     }
   ]
 }
