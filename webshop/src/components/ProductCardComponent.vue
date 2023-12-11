@@ -10,8 +10,6 @@
 
 
 <script>
-
-
 export default {
   props: {
     product: Object,

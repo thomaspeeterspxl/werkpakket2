@@ -41,7 +41,7 @@ export default {
       products: jsonData.producten,
       eigenschappen: [],
       selectedFilters: [],
-      filterOptions: ["All", "vinyls", "platenspelers & accesiores", "eminem", "game/movie", "ed-sheeran", "naalden", "platenspeler", "hoezen", "rammstein", "boywithuke", "harry-styles"],
+      filterOptions: ["All", "vinyls", "eminem", "game/movie", "ed-sheeran", "rammstein", "boywithuke", "harry-styles", "platenspelers & accesiores", "naalden", "platenspeler", "hoezen" ],
       pageSize: 8,
       page: 1,
     }
@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     filterProducts() {
-      this.page = 1; // Reset to the first page when filters change
+      this.page = 1;
     },
     goToPage(newPage) {
       if (newPage >= 1 && newPage <= this.totalPages) {
@@ -79,5 +79,5 @@ export default {
 </script>
 
 <style scoped>
-/* Add your styles here */
+
 </style>
