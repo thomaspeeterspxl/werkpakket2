@@ -29,21 +29,7 @@ data() {
         this.counter -= 1;
       }
     },
-    addToCart() {
-      if (this.counter > 0) {
-        const cartItem = {
-          name: this.product.title,
-          quantity: this.counter,
-          price: this.product.prijs,
-          image: this.product.afbeelding, // Include image property if needed
-          description: this.product.omschrijving, // Include description property if needed
-          // Add other properties based on your needs
-        };
-        this.$router.push({ name: 'Winkelmand', params:{cartItem}});
-
-      }
-    },
-  },
+  }
 }
 </script>
 <template>
