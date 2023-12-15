@@ -3,6 +3,8 @@
     <h1>catalogus</h1>
     <p>Hier vind u een overzicht van alle producten die beschikbaar zijn op deze webshop.</p>
     <p>Zijn er producten die u misschien mist, kom dan zeker eens langs in de winkel.</p>
+  </section>
+  <main class="main">
     <div class="filter">
       <label v-for="filterOption in filterOptions" :key="filterOption" class="filter-label">
         <input
@@ -15,8 +17,6 @@
         <span class="filter-text">{{ filterOption }}</span>
       </label>
     </div>
-  </section>
-  <main class="main">
     <div v-for="(product, index) in paginatedProducts" :key="index" class="main-products">
       <ProductCardComponent :product="product"/>
     </div>
@@ -41,7 +41,7 @@ export default {
       products: jsonData.producten,
       eigenschappen: [],
       selectedFilters: [],
-      filterOptions: ["All", "vinyls", "eminem", "game/movie", "ed-sheeran", "rammstein", "boywithuke", "harry-styles", "platenspelers & accesiores", "naalden", "platenspeler", "hoezen" ],
+      filterOptions: ["All", "vinyls", "eminem", "game/movie", "ed-sheeran", "rammstein", "boywithuke", "harry-styles", "platenspelers & accesiores", "colored", "naalden", "platenspeler", "hoezen" ],
       pageSize: 8,
       page: 1,
     }
@@ -52,10 +52,11 @@ export default {
         return this.products;
       } else {
         return this.products.filter((product) => {
-          return product.eigenschappen.some(prop => this.selectedFilters.includes(prop));
+          return this.selectedFilters.every(filter => product.eigenschappen.includes(filter));
         });
       }
     },
+
     totalPages() {
       return Math.ceil(this.filteredProducts.length / this.pageSize)
     },

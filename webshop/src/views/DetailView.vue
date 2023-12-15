@@ -1,29 +1,20 @@
 <script>
 import jsonData from '@/assets/products.json';
+// import winkelmand from '@/views/WinkelmandView.vue';
 export default {
 
-  data() {
-    return {
-      quantity: 1,
-      counter: 0,
-    }
+data() {
+  return {
+    quantity: 1,
+    counter: 0,
+    cart: [],
+  }
   },
   computed: {
     product() {
       const productData = jsonData.producten;
       const productId = this.$route.params.id;
-
-      if (!productId) {
-        return null;
-      }
-
-      const foundProduct = productData.find(product => product.id === parseInt(productId));
-
-      if (!foundProduct) {
-        return null;
-      }
-
-      return foundProduct;
+      return productData.find(product => product.id === parseInt(productId));
     },
   },
   methods: {
@@ -36,6 +27,20 @@ export default {
     deleteOne() {
       if (this.counter > 0) {
         this.counter -= 1;
+      }
+    },
+    addToCart() {
+      if (this.counter > 0) {
+        const cartItem = {
+          name: this.product.title,
+          quantity: this.counter,
+          price: this.product.prijs,
+          image: this.product.afbeelding, // Include image property if needed
+          description: this.product.omschrijving, // Include description property if needed
+          // Add other properties based on your needs
+        };
+        this.$router.push({ name: 'Winkelmand', params:{cartItem}});
+
       }
     },
   },
@@ -60,6 +65,10 @@ export default {
           <button id="increaseQuantity" class="quantity-button" @click="addOne()">+</button>
         </div>
         <button class="button" @click="addToCart">Add to Cart</button>
+        <!-- Example router link in a template -->
+        <router-link to="/winkelmand">Go to Shopping Cart</router-link>
+
+
       </div>
       <div class="detail-description">
         <h2 class="detail-description-title">tracklist</h2>

@@ -87,9 +87,9 @@
 .filter {
   margin: 30px 0 0 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 .filter-label {
   display: inline-block;

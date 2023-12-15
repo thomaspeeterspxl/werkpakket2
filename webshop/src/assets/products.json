@@ -31,7 +31,7 @@
       "prijs": 39.99,
       "btw_tarief": 21,
       "voorraad": 28,
-      "eigenschappen": ["vinyls","eminem"]
+      "eigenschappen": ["vinyls","eminem", "colored"]
     },
     {
       "id": 4,
