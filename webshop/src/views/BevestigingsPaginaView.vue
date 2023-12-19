@@ -4,59 +4,73 @@
     <h1>Bevestiging bestelling</h1>
     <p>{{ bevestigingsbericht }}</p>
     <p>{{uitleg}}</p>
-
-    <h2>Your Order Details:</h2>
-    <ul class="product-list">
-      <li v-for="product in products" class="product-item">
-        {{ product.name }} - {{ product.price }} Euro
-      </li>
-    </ul>
-
-    <p>Total Price: {{ totalPrice }} Euro</p>
-
-    <button @click="goBack">terug</button>
+   <winkelmandcomponent></winkelmandcomponent>
   </div>
   </body>
 </template>
 
 <script>
+import {useShoppingCartStore} from '@/stores/shoppingCartStore.js'
+import {useProductStore} from '@/stores/productStore.js'
+import winkelmandcomponent from "@/components/winkelmandcomponent.vue";
+
 export default {
   data() {
-    return{
+    return {
       bevestigingsbericht: 'Bedankt voor je bestelling',
-      uitleg:'',
-      products: [
-        { name: 'Product 1', price: 20 },
-        { name: 'Product 2', price: 30 },
-      ],
-    }
+      uitleg:'De betaling is geslaagd. Je ordernummer is: 2359845',
+      products: useProductStore(),
+      shoppingCartProducts: useShoppingCartStore(),
+    };
   },
-  computed: {
-    totalPrice() {
-      return this.products.reduce((total, product) => total + product.price, 0);
-    }
+  methods: {
+    viewCheckout(){
+      this.$router.push({name:'checkout'})
+    },
+    viewProducts(){
+      this.$router.push({name:'products'})
+    },
+  },
+  components:{
+    winkelmandcomponent
   }
 }
 </script>
 
 <style scoped>
 body {
-  margin: 0;
   padding: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
 .confirmation-container {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
 }
-.product-list {
-  list-style: none;
-  padding: 0;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
-.product-item {
-  margin-bottom: 10px;
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #BEA888;
+  color: #fff;
+  font-family: "Open Sans";
+}
+
+img {
+  max-width: 200px;
+  max-height: 200px;
 }
 </style>

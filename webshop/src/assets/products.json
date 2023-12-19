@@ -81,7 +81,7 @@
       "afbeelding": "/src/assets/images/platenspeler.png",
       "prijs": 50,
       "btw_tarief": 21,
-      "voorraad": 16,
+      "voorraad": 0,
       "eigenschappen": ["platenspelers & accesiores","platenspeler"]
     },
     {

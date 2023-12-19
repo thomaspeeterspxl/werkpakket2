@@ -84,40 +84,7 @@
   padding-top: 2rem;
   font-family: $font-nunito;
 }
-.filter {
-  margin: 30px 0 0 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-}
-.filter-label {
-  display: inline-block;
-  margin: 5px;
-  //padding: 8px 12px;
-  border: 2px solid $tertiair-color;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
 
-.filter-input {
-  display: none;
-}
-
-.filter-label:hover,
-.filter-input:checked + .filter-text {
-  background-color: $tertiair-color;
-  color: #fff;
-}
-
-.filter-input:checked {
-  font-weight: bold;
-}
-
-.filter-text {
-  font-size: 16px;
-}
 
 .pagination {
   display: flex;

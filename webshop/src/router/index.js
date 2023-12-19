@@ -5,8 +5,9 @@ import ProductsView from "@/views/ProductsView.vue";
 // import DetailPaginaView from "@/views/DetailPaginaView.vue";
 import WinkelmandView from "@/views/WinkelmandView.vue";
 // import productsView from "@/views/ProductsView.vue";
-import bevestigingsPaginaView from "@/views/BevestigingsPaginaView.vue";
 import DetailView from "@/views/DetailView.vue";
+import CheckOutView from "@/views/CheckOutView.vue";
+import BevestigingsPaginaView from "@/views/BevestigingsPaginaView.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -29,6 +30,7 @@ const router = createRouter({
         {
             path: '/products',
             component: ProductsView,
+            name:'products'
         },
         {  path: '/details/:id', name: 'details', component: DetailView, props: true },
         // {
@@ -54,16 +56,22 @@ const router = createRouter({
           component: WinkelmandView,
           name:'Winkelmand'
         },
+        {
+            path:  '/checkout',
+            component: CheckOutView,
+            name:'checkout'
+        },
+        {
+            path:  '/bevestigingspagina',
+            component: BevestigingsPaginaView,
+            name:'bevestiging'
+        },
         // {
         //     path: '/products/:id',
         //     name: 'ProductDetail',
         //     component: DetailPaginaView,
         //     props: true,
         // },
-        {
-            path: '/bevestigingspagina',
-            component: bevestigingsPaginaView,
-        },
 
     ]
 })

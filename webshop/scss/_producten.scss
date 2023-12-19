@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .main {
-  width: 100%;
+  width: 75%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -41,12 +41,47 @@
     }
   }
 }
+#products{
+  display: flex;
 
+}
+.filter {
+  margin: 30px 100px 0 32px;
+  display: flex;
+  width: 15%;
+  //height: 75%;
+  align-items: flex-start;
+  //justify-content: center;
+  flex-direction: column;
+}
+.filter-label {
+  display: inline-block;
+  margin: 15px;
+  //padding: 8px 12px;
+  border: 2px solid $tertiair-color;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
 
+.filter-input {
+  display: none;
+}
 
+.filter-label:hover,
+.filter-input:checked + .filter-text {
+  background-color: $tertiair-color;
+  color: #fff;
+}
 
+.filter-input:checked {
+  font-weight: bold;
+}
 
-
-
+.filter-text {
+  font-size: 18px;
+  font-family:$font-josefinSans;
+  //padding: 8px 12px;
+}
 
 
