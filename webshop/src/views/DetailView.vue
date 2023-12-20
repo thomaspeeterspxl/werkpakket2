@@ -1,5 +1,4 @@
 <script>
-// import jsonData from '@/assets/products.json';
 import { useProductStore } from '@/stores/productStore.js'
 import { useShoppingCartStore} from "@/stores/ShoppingCartStore";
 
@@ -45,7 +44,7 @@ data() {
           quantity: this.quantity,
         };
         this.shoppingCartStore.addToCart(cartItem);
-        this.productStore.updateStockQuantity(this.product.id, -this.quantity);
+        this.productStore.updateVoorraadQuantity(this.product.id, -this.quantity);
 
         this.showPopup = true;
       }
@@ -79,37 +78,6 @@ data() {
         Je item is succesvol toegevoegd aan je winkelmandje!<br>
         <router-link to="/winkelmand">Ga naar je winkelmandje</router-link>
       </div>
-      <div class="detail-description">
-        <h2 class="detail-description-title">tracklist</h2>
-        <article>
-          <ol class="detail-description-list">
-            <li>Curtains Up (Skit)</li>
-            <li>White America</li>
-            <li>Business</li>
-            <li>Cleaning Out My Closet</li>
-            <li>Square Dance</li>
-            <li>The Kiss (Skit)</li>
-            <li>Soldier</li>
-            <li>Say Goodbye Hollywood</li>
-            <li>Drips</li>
-            <li>Without Me</li>
-          </ol>
-        </article>
-        <article>
-          <ol class="detail-description-list">
-            <li>Paul Rosenberg (Skit)</li>
-            <li>Sing For The Moment</li>
-            <li>Superman</li>
-            <li>Hailie's Song</li>
-            <li>Steve Berman (Skit)</li>
-            <li>When The Music Stops</li>
-            <li>Say What You Say</li>
-            <li>Till I Collapse</li>
-            <li>My Dad's Gone Crazy</li>
-            <li>Curtains Close (Skit)</li>
-          </ol>
-        </article>
-      </div>
     </section>
   </div>
 </template>
@@ -120,11 +88,9 @@ data() {
   top: 20vh;
   left: 50%;
   transform: translateX(-50%);
-  padding: 1vh 2vw;
+  padding: 10px 23px;
   z-index: 1000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  opacity: 1;
-  transition: opacity 0.3s ease;
+  box-shadow: 0 0 15px #84B5A5;
   text-align: center;
 }
 </style>

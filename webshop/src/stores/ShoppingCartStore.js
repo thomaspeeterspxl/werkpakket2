@@ -1,20 +1,17 @@
-import { defineStore } from "pinia";
-import { useProductStore } from "@/stores/productStore.js";
+import {defineStore} from "pinia";
+import {useProductStore} from "@/stores/productStore.js";
 
 export const useShoppingCartStore = defineStore('shoppingCart', {
     state: () => ({
         cartItems: [],
         productStore: useProductStore()
     }),
-
-
     getters: {
         getCartItems: () => this.cartItems,
     },
-
     actions: {
         addToCart: function (cartItem) {
-            this.productStore.updateStockQuantity(cartItem.product.id, -cartItem.quantity);
+            this.productStore.updateVoorraadQuantity(cartItem.product.id, -cartItem.quantity);
             const existingItem = this.cartItems.find(item => item.product.id === cartItem.product.id);
 
             if (existingItem) {

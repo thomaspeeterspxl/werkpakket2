@@ -1,24 +1,21 @@
-import { defineStore } from "pinia";
+import {defineStore} from "pinia";
 import jsonData from '@/assets/products.json';
 
 export const useProductStore = defineStore('products', {
-
     state: () => ({
         productlijst: jsonData.producten,
     }),
-
     getters: {
         getProductById: (state) => (productId) => {
             return state.productlijst.find((product) => product.id == productId) || null;
         },
     },
-
     actions: {
-        updateStockQuantity: function (productId, quantity) {
+        updateVoorraadQuantity: function (productId, quantity) {
             const product = this.getProductById(productId);
 
             if (product) {
-                product.stock_quantity += quantity;
+                product.voorraad_quantity += quantity;
             }
         },
     },
