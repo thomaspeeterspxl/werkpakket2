@@ -14,23 +14,6 @@
 import jsonData from '@/assets/products.json';
 import PopularProductCardComponent from "@/components/PopularProductCardComponent.vue";
 export default {
-  // computed: {
-  //   top5Products() {
-  //     return this.getTop5Products();
-  //   },
-  // },
-  // methods: {
-  //   getTop5Products() {
-  //
-  //     const sortedProducts = jsonData.producten
-  //     sortedProducts.sort((a, b) => b.voorraad - a.voorraad);
-  //
-  //
-  //     const top5Products = sortedProducts.slice(0, 5);
-  //
-  //     return top5Products;
-  //   },
-  // },
   data() {
     return {
       jsonData: [],
