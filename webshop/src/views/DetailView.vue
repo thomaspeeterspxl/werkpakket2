@@ -93,4 +93,7 @@ data() {
   box-shadow: 0 0 15px #84B5A5;
   text-align: center;
 }
+.detail-description-price span{
+  color: red;
+}
 </style>
