@@ -35,7 +35,7 @@
       <td></td>
       <td></td>
       <td>Totaal zonder btw:</td>
-      <td><span>€{{ calculateTotalWithoutVAT() }}</span></td>
+      <td><span>€{{ berekenTotaalZonderBTW() }}</span></td>
     </tr>
     <tr>
       <td></td>
@@ -43,7 +43,7 @@
       <td></td>
       <td></td>
       <td>btw: </td>
-      <td>{{ '€' + calculateTotalVAT() }}</td>
+      <td>{{ '€' + berekenTotaalBTW() }}</td>
     </tr>
     <tr>
       <td></td>
@@ -51,7 +51,7 @@
       <td></td>
       <td></td>
       <td>Totaal: </td>
-      <td>{{ '€' + calculateTotalWithVAT() }}</td>
+      <td>{{ '€' + berekenTotaalMetBTW() }}</td>
     </tr>
     </tfoot>
   </table>
@@ -84,28 +84,28 @@ export default {
     removeProduct(index) {
       this.shoppingCartProducts.removeFromCart(index);
     },
-    calculatePriceVAT(product) {
+    berekenPrijsBTW(product) {
       return (product.prijs * (product.btw_tarief / 100)).toFixed(2);
     },
-    calculatePriceWithVAT(product) {
+    berekenPrijsMetBTW(product) {
       return (product.prijs * (1 + product.btw_tarief / 100)).toFixed(2);
     },
-    calculatePriceWithoutVAT(product) {
+    berekenPrijsZonderBTW(product) {
       return product.prijs.toFixed(2);
     },
-    calculateTotalWithVAT() {
+    berekenTotaalMetBTW() {
       return this.shoppingCartProducts.cartItems.reduce(
-          (total, product) => total + product.quantity * this.calculatePriceWithVAT(product.product),
+          (Totaal, product) => Totaal + product.quantity * this.berekenPrijsMetBTW(product.product),
           0).toFixed(2);
     },
-    calculateTotalVAT() {
+    berekenTotaalBTW() {
       return this.shoppingCartProducts.cartItems.reduce(
-          (total, product) => total + product.quantity * this.calculatePriceVAT(product.product),
+          (Totaal, product) => Totaal + product.quantity * this.berekenPrijsBTW(product.product),
           0).toFixed(2);
     },
-    calculateTotalWithoutVAT() {
+    berekenTotaalZonderBTW() {
       return this.shoppingCartProducts.cartItems.reduce(
-          (total, product) => total + product.quantity * this.calculatePriceWithoutVAT(product.product),
+          (Totaal, product) => Totaal + product.quantity * this.berekenPrijsZonderBTW(product.product),
           0).toFixed(2);
     },
   },

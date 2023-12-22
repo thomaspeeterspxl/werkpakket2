@@ -7,7 +7,6 @@ export default {
 data() {
   return {
     quantity: 1,
-    counter: 0,
     showPopup: false,
   }
   },
